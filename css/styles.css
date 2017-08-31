@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Arial, Helvetica;
+}
+
+.stats p {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: orange;
+}
+
+p.timer {
+    color: blue;
+}
+
+p.clicks {
+    color: purple;
+}
+
+.game {
+    position: relative;
+}
+
+.board {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hammer {
+    position: absolute;
+    transform: rotate(-45deg);
+}
+
+.hammer.active {
+    transform: rotate(-90deg);
+}
+
+.whack {
+    background-color: green;
+    border: 1px solid #fff;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whack:before {
+      content: "";
+      float: left;
+      padding-top: 100%;
+    }
+
+.mole {
+    width: 70%;
+    height: 70%;
+    background-color: red;
+    border-radius: 100%;
+}
+
+.mole.active {
+    background-color: blue;
+}
+
+.mole.clicked {
+    background-color: yellow;
+}
+
+.impact-text {
+    position: absolute;
+    color: #008B8B;
+    font-family: Verdana, Arial, Helvetica;
+    font-weight: bold;
+    font-size: 3rem;
+    transform: scale(0);
+    -webkit-transform:scale(0);
+    transform-origin: 0, 0;
+    -webkit-transform-origin: 100%, 100%;
+    transition: scale 0.03s ease-in;
+}
+
+.impact-text.active {
+    transform: scale(1) rotate(-35deg);
+    -webkit-transform: scale(1) rotate(-35deg);
+}
+
+.game-over-text {
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    font-size: 8rem;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.5)
+}
+
+.game-over-text.active {
+    opacity: 1;
+    height: auto;
+}
+
+.accuracy {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* tablet */
+@media (min-width: 768px) and (orientation: landscape) {
+    .game {
+        max-width: 768px;
+    }
+}
