@@ -31,15 +31,6 @@ p.clicks {
     flex-wrap: wrap;
 }
 
-.hammer {
-    position: absolute;
-    transform: rotate(-45deg);
-}
-
-.hammer.active {
-    transform: rotate(-90deg);
-}
-
 .grass {
     background-color: green;
     border: 1px solid #fff;
@@ -58,12 +49,12 @@ p.clicks {
 .mole {
     width: 70%;
     height: 70%;
-    background-color: red;
+    background-color: #000;
     border-radius: 100%;
 }
 
 .mole.active {
-    background-color: blue;
+    background-color: #ff0000;
 }
 
 .mole.clicked {
